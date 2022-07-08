@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #cecffc;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="imges/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> Bingsu & Tea
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cart.html" tabindex="-1" aria-disabled>Giỏ hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="login.html" tabindex="-1" aria-disabled="true">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="register.html" tabindex="-1" aria-disabled="true">Đăng kí</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:65%;">
+                        <button class="btn btn-outline-danger" type="submit"><i class="bi bi-search"></i> Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <div class="container-fluid ">
+        <div class="container pt-2" style="background-color: #cecffc;">
+            <div class="banner">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <br><br><br><br>
+                        <h4>Chào mừng bạn đã đến với <span style="color: red;text-shadow: 1px 1px 2px rgb(0, 0, 0);"><span style="color: rgb(247, 247, 247);text-shadow: 1px 1px 2px rgb(0, 0, 0);">Mr</span>P</span>.</h4>
+                        <br>
+                        <p>Cùng nhau thưởng thức những món ăn ngon và những loại nước đặt biệt giải khát cho nhũng ngày hè nóng nực ngay nhé.</p>
+                        <a href="login.html" class="btn btn-danger" style="border: 1px solid white ;text-shadow: 1px 1px 2px black;box-shadow: 0.5px 0.5px 5px black; ">Order ngay</a>
+                    </div>
+                    <div class="col-6">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" style="margin-left: 5%;">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="imges/b1.jpg" class="d-block " alt="..." style="width:80% ; height:350px; position: relative;left: 10%;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imges/b2.jpg" class="d-block" alt="..." style="width:80% ; height:350px; position: relative;left: 10%;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imges/b3.jpg" class="d-block" alt="..." style="width:80% ; height:350px; position: relative;left: 10%;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imges/b4.jpg" class="d-block" alt="..." style="width:80% ; height:350px; position: relative;left: 10%;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+                    <section class="h-100 h-custom" style="background-color: #cecffc">
+                        <div class="container py-5 h-100">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body p-4">
+
+                                            <div class="row">
+
+                                                <div class="col-lg-7">
+                                                    <h5 class="mb-3">
+                                                        <a href="index.html" class="text-body" style="text-decoration: none;">
+                                                            <i class="bi bi-arrow-left-square"></i> Tiếp tục chọn món</a>
+                                                    </h5>
+                                                    <hr>
+
+                                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                                        <div>
+                                                            <p class="mb-1">Giỏ hàng</p>
+                                                            <p class="mb-0">Hiện có <u>3</u> sản phẩm trong giỏ hàng của bạn</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" style="background-color: #cecffc">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between">
+                                                                <div class="d-flex flex-row align-items-center">
+                                                                    <div>
+                                                                        <img src="imges/h25.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                                    </div>
+                                                                    <div class="ms-3">
+                                                                        <h4>Sữa chua táo xanh</h4>
+                                                                        <p>Size: L</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row align-items-center pt-2">
+                                                                    <div class="col-6">
+                                                                        Số lượng:
+                                                                        <select class="form-select" style="width: 65px;">
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                            <option>3</option>
+                                                                            <option>4</option>
+                                                                          </select>
+                                                                    </div>
+                                                                    <div class="col-6 text-center">
+                                                                        Giá: <br>34.000 VNĐ
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card mb-3" style="background-color: #cecffc">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between">
+                                                                <div class="d-flex flex-row align-items-center">
+                                                                    <div>
+                                                                        <img src="imges/h24.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                                    </div>
+                                                                    <div class="ms-3">
+                                                                        <h4>Trà vải</h4>
+                                                                        <p>Size: M</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row align-items-center pt-2">
+                                                                    <div class="col-6">
+                                                                        Số lượng:
+                                                                        <select class="form-select" style="width: 65px;">
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                            <option>3</option>
+                                                                            <option>4</option>
+                                                                          </select>
+                                                                    </div>
+                                                                    <div class="col-6 text-center">
+                                                                        Giá: <br>25.000 VNĐ
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card mb-3" style="background-color: #cecffc">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between">
+                                                                <div class="d-flex flex-row align-items-center">
+                                                                    <div>
+                                                                        <img src="imges/h23.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                                    </div>
+                                                                    <div class="ms-3">
+                                                                        <h4>Trà dưa hấu bạc hà</h4>
+                                                                        <p>Size: M</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row align-items-center pt-2">
+                                                                    <div class="col-6">
+                                                                        Số lượng:
+                                                                        <select class="form-select" style="width: 65px;">
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                            <option>3</option>
+                                                                            <option>4</option>
+                                                                          </select>
+                                                                    </div>
+                                                                    <div class="col-6 text-center">
+                                                                        Giá: <br>25.000 VNĐ
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-5">
+
+                                                    <div class="card text-dark rounded-3" style="background-color: #cecffc">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                                                <h5 class="mb-0">Thông tin giao hàng</h5>
+
+                                                            </div>
+
+                                                            <form class="mt-4 pt-2">
+                                                                <div class="form-outline form-white mb-4">
+                                                                    <label class="form-label" for="typeName">Họ và tên </label>
+                                                                    <input type="text" id="typeName" class="form-control form-control-lg" siez="17" placeholder="Họ và tên người nhận" style="width: 100%;">
+
+                                                                </div>
+
+                                                                <div class="form-outline form-white mb-4">
+                                                                    <label class="form-label" for="typeText">Địa chỉ</label>
+                                                                    <input type="text" id="typeText" class="form-control form-control-lg" placeholder="Số nhà/Đường/Khu vực/Phường" style="width: 100%;">
+
+                                                                </div>
+                                                                <div class="row mb-4">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-outline form-white">
+                                                                            <label class="form-label" for="typeExp">số điện thoại</label>
+                                                                            <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="+84* *** ***" size="7" id="exp" minlength="7" maxlength="7" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-outline form-white">
+                                                                            <label class="form-label" for="typeText">Email</label>
+                                                                            <input type="password" id="typeText" class="form-control form-control-lg" placeholder="***@gmail.com" size="1" minlength="3" maxlength="3" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </form>
+
+                                                            <hr class="my-4">
+
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="mb-2">tổng số lượng sản phẩm</p>
+                                                                <p class="mb-2">3</p>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="mb-2">thuế GTGT</p>
+                                                                <p class="mb-2">0%</p>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-between mb-4">
+                                                                <p class="mb-2">Tổng thanh toán</p>
+                                                                <p class="mb-2">84.000 VNĐ</p>
+                                                            </div>
+
+                                                            <button type="button" class="btn btn-danger btn-block btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 50%;margin-left: 25%;color: white;text-shadow: 1px 1px 1px black;box-shadow: 1px 1px 5px black;border: 1px solid white;">
+                                                                <div class="d-flex justify-content-between" style="text-shadow: 1px 1px 2px black;">
+                                                                    Thanh toán ngay
+                                                                </div>
+                                                            </button>
+                                                            <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content ">
+                                                                        <div class="modal-header">
+                                                                            <h3 style="color: rgb(0, 0, 0); margin-left: 35%; ">Thanh toán</h3>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body text-dark">
+                                                                            <form action="/action_page.php">
+                                                                                <p>Bạn đã có tài khoảng? <a href="login.html">Đăng nhập</a></p>
+                                                                                <h5>Sản phẩm cần thanh toán</h5>
+                                                                                <div class="card mb-2" style="background-color: #cecffc;">
+                                                                                    <div class="card-body">
+                                                                                        <div class="d-flex justify-content-between">
+                                                                                            <div class="d-flex flex-row align-items-center">
+                                                                                                <div>
+                                                                                                    <img src="imges/h25.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 55px;">
+                                                                                                </div>
+                                                                                                <div class="ms-3">
+                                                                                                    <h5>Sữa chua táo ...</h5>
+                                                                                                    <p>Size: L</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row align-items-center pt-2">
+                                                                                                <div class="col-6">
+                                                                                                    Số lượng: 1
+                                                                                                </div>
+                                                                                                <div class="col-6 text-center">
+                                                                                                    Giá: 34.000 VNĐ
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="card mb-2" style="background-color: #cecffc;">
+                                                                                    <div class="card-body">
+                                                                                        <div class="d-flex justify-content-between">
+                                                                                            <div class="d-flex flex-row align-items-center">
+                                                                                                <div>
+                                                                                                    <img src="imges/h24.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 55px;">
+                                                                                                </div>
+                                                                                                <div class="ms-3">
+                                                                                                    <h5>Trà vải</h5>
+                                                                                                    <p>Size: M</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row align-items-center pt-2">
+                                                                                                <div class="col-6">
+                                                                                                    Số lượng: 1
+                                                                                                </div>
+                                                                                                <div class="col-6 text-center">
+                                                                                                    Giá: 25.000 VNĐ
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="card mb-2" style="background-color: #cecffc;">
+                                                                                    <div class="card-body">
+                                                                                        <div class="d-flex justify-content-between">
+                                                                                            <div class="d-flex flex-row align-items-center">
+                                                                                                <div>
+                                                                                                    <img src="imges/h23.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 55px;">
+                                                                                                </div>
+                                                                                                <div class="ms-3">
+                                                                                                    <h5>Trà dưa hấu ...</h5>
+                                                                                                    <p>Size: M</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row align-items-center pt-2">
+                                                                                                <div class="col-6">
+                                                                                                    Số lượng: 1
+                                                                                                </div>
+                                                                                                <div class="col-6 text-center">
+                                                                                                    Giá: 25.000 VNĐ
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <h5>Phương thức thanh toán:</h5>
+                                                                                <div class="form-check" style="margin-left: 10%;">
+                                                                                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Thanh toán khi nhận hàng:
+                                                                                    <label class="form-check-label" for="radio1"></label>
+                                                                                </div>
+                                                                                <div class="form-check" style="margin-left: 10%;">
+                                                                                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Thanh toán qua <a href="#" style="text-decoration: none;">ngân hàng:</a>
+                                                                                    <label class="form-check-label" for="radio2"></label>
+                                                                                </div>
+                                                                                <h5>Phương thức giao hàng:</h5>
+                                                                                <div class="form-check" style="margin-left: 10%;">
+                                                                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                                                                    <label class="form-check-label">Giao hàng tận nơi: 15.000 VNĐ</label>
+                                                                                </div>
+                                                                                <h5>Mã giảm giá:</h5>
+                                                                                <form class="d-flex">
+                                                                                    <div class="row">
+                                                                                        <div class="col-7">
+                                                                                            <input style="width:100%" class="form-control me-2" type="text" placeholder="nhập mã">
+                                                                                        </div>
+                                                                                        <div class="col-5">
+                                                                                            <button style="width: 100px; border: 1px solid white ;text-shadow: 1px 1px 2px black;box-shadow: 0.5px 0.5px 5px black; " class="btn btn-danger" type="button">Áp dụng</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </form>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                                                            <button type="button" class="btn btn-danger" style="width: 150px ;border: 1px solid white ;text-shadow: 1px 1px 2px black;box-shadow: 0.5px 0.5px 5px black; ">Thanh toán</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<footer class="p-0 text-dark ">
+    <div class="container-fluid " style="background-color: #cecffc; ">
+        <div class="container " style="background-color: #cecffc; ">
+            <div class="row ">
+                <span style="margin-top: 10px; font-family: 'Times New Roman', Times, serif; "><h5>Có thể liên kết với chúng tôi qua mạng xã hội sau:</h5></span>
+                <div class="col-4 ">
+                    <div class="a " style="border: 1px solid rgb(240, 76, 104); width: 40px; margin-left: 135%; border-radius: 5px; background-color: white; ">
+                        <span style="margin-left: 30%; ">
+                            <a href="# " style="color: rgb(240,76,104); "><i class="bi bi-instagram "></i></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="a " style="border: 1px solid rgb(16, 55, 228); width: 40px; margin-left: 45%; border-radius: 5px; background-color: white; ">
+                        <span style="margin-left: 28%; ">
+                            <a href="# " style="color: rgb(16, 55, 228); "><i class="bi bi-facebook "></i></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="a " style="border: 1px solid rgb(231, 39, 39); width: 40px; margin-left: -45%; border-radius: 5px; background-color: white; ">
+                        <span style="margin-left: 28%; ">
+                            <a href="# " style="color: rgb(231, 39, 39); "><i class="bi bi-google "></i></a>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <hr style="height: 1px; color: rgb(0, 0, 0); ">
+            <div class="row " style="padding: 10px; ">
+                <div class="col-md-4 ">
+                    <h4>Map:</h4>
+                    <div class="map ">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.825950880953!2d105.46641071428068!3d9.780790279455033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0e90d6b2e95cf%3A0x3805d5d08e23034d!2sMrp%20Bingsu%20%26%20Tea%20V%E1%BB%8B%20Thanh!5e0!3m2!1svi!2s!4v1655272732392!5m2!1svi!2s "
+                            width="280 " height="350 " style="border:0; " allowfullscreen=" " loading="lazy " referrerpolicy="no-referrer-when-downgrade "></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <h4>Bản tin mới cập nhật: </h4>
+                    <div class="row d-flex ">
+                        <div class="col-md-3 ">
+                            <a href="# ">
+                                <img src="imges/b3.jpg " alt=" " style="width: 80px; height: 90px; ">
+                            </a>
+                        </div>
+                        <div class="col-9 ">
+                            <a class="a2 " href="# " style="text-decoration: none; color: rgb(66, 66, 66); ">Matcha & Choco đã xuất hiện tại Mrp rồi đây!!!</a>
+                            <p>
+                                <i class="bi bi-calendar-heart "> </i>15/6/2022
+                            </p>
+                            <br>
+                            <a href="# " style="color: rgb(143, 143, 143); ">Xem thêm</a>
+                        </div>
+                        <hr style="color: black; width: 95%;margin-top: 5px; ">
+                        <h4>Dịch vụ:</h4>
+                        <span> <a href="# " style="text-decoration: none; color: rgb(66, 66, 66); "> Điều khoảng</a></span>
+                        <span><a href="# " style="text-decoration: none; color: rgb(66, 66, 66); ">Chính sách bảo mật</a></span>
+                        <span> <a href="# " style="text-decoration: none; color: rgb(66, 66, 66); ">Phương thức bảo mật</a> </span>
+                        <hr style="color: black; width: 95%;margin-top: 5px; ">
+                        <h4>Đóng góp ý kiến:</h4>
+                        <a href="Suggestion.html " class="btn btn-danger " style="width: 100px; border: 1px solid white ;text-shadow: 1px 1px 2px black;box-shadow: 0.5px 0.5px 5px black; margin-left: 10px; ">Góp ý</a>
+                        <hr style="color: black; width: 95%;margin-top: 5px; ">
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <h4>
+                        <img src="imges/logo.png " style="width:40px; " class="rounded-pill ">Bingsu & Tea
+                    </h4>
+                    <p style="text-align: justify; ">Cảm ơn quý khách đã đồng hàng cùng chúng tôi suốt quảng thời gian qua và mong mọi người sẽ tiếp tục đồng hàng, ủng hộ cùng chúng tôi phát triển. Mọi ý kiến đóng góp đánh giá xin liên hệ với chúng tôi qua:</p>
+
+                    <hr>
+                    <span>
+                        <i class="bi bi-house "></i> Địa chỉ: khu vực IV, phường I, Thành phố Vị Thanh
+                    </span>
+                    <br>
+                    <hr>
+                    <span>
+                        <i class="bi bi-telephone "></i> Hotline: 0944856750
+                    </span>
+                    <br>
+                    <hr>
+                    <span>
+                        <i class="bi bi-envelope "></i> Gmail: gbao11200@gmail.com
+                    </span>
+                    <hr style="color: black; width: 95%; ">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
